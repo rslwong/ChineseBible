@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">中文聖經</string>
+    <string name="textview"></string>
+    <string name="button1">-</string>
+    <string name="button2">+</string>
+
+</resources>
