@@ -47,9 +47,13 @@ public class MainActivity extends AppCompatActivity {
             ioe.printStackTrace();
         }
 
-        tv.setMovementMethod(new ScrollingMovementMethod());
-        this.setTitle(book);
+        //tv.setMovementMethod(new ScrollingMovementMethod());
+        tv.setMaxLines(1000);
+        tv.setMovementMethod(ScrollingMovementMethod.getInstance());
 
+        tv.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(R.dimen.text_medium));
+
+        this.setTitle(book);
 
         final Button button1 = findViewById(R.id.button1);
         button1.setOnClickListener(new View.OnClickListener() {
