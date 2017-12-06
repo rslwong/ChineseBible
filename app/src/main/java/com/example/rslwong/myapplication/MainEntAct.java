@@ -12,6 +12,8 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
+import android.util.TypedValue;
+import android.view.Gravity;
 
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -81,8 +83,12 @@ public class MainEntAct extends Activity implements AdapterView.OnItemClickListe
             name.setText(item.getName());
             if (item.getChapters()==-1) {
                 name.setBackgroundColor(Color.GRAY);
+                name.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(R.dimen.text_huge));
+                name.setGravity(Gravity.CENTER);
             } else {
                 name.setBackgroundColor(Color.WHITE);
+                name.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(R.dimen.text_medium));
+                name.setGravity(Gravity.LEFT);
             }
             return view;
         }

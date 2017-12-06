@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -80,9 +82,13 @@ public class MainEntActPage2 extends Activity implements AdapterView.OnItemClick
             if (position==0) {
                 name.setBackgroundColor(Color.GRAY);
                 name.setText(book);
+                name.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(R.dimen.text_huge));
+                name.setGravity(Gravity.CENTER);
             } else {
                 name.setBackgroundColor(Color.WHITE);
                 name.setText(String.valueOf(position));
+                name.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(R.dimen.text_medium));
+                name.setGravity(Gravity.LEFT);
             }
             return view;
         }
