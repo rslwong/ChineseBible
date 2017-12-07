@@ -14,6 +14,7 @@ import java.io.InputStreamReader;
 import java.io.BufferedReader;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
+import android.widget.ScrollView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,9 +41,10 @@ public class MainActivity extends AppCompatActivity {
         }
         tv.setMovementMethod(ScrollingMovementMethod.getInstance());
         if (fontSize==-1)
-            fontSize = getResources().getDimension(R.dimen.text_size5);
-
+            fontSize = getResources().getDimension(R.dimen.text_size5); // default size
         tv.setTextSize(TypedValue.COMPLEX_UNIT_PX, fontSize);
+        ScrollView mainScrollView = (ScrollView)findViewById(R.id.horizontalScrollView1);
+        mainScrollView.scrollTo(0,0);
         this.setTitle(book);
     }
 
