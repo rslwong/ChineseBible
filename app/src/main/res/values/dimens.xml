@@ -21,4 +21,17 @@
     <dimen name="text_large">22sp</dimen>
     <dimen name="text_huge">26sp</dimen>
 
+    <dimen name="text_size0">14sp</dimen>
+    <dimen name="text_size1">16sp</dimen>
+    <dimen name="text_size2">18sp</dimen>
+    <dimen name="text_size3">20sp</dimen>
+    <dimen name="text_size4">22sp</dimen>
+    <dimen name="text_size5">24sp</dimen>
+    <dimen name="text_size6">26sp</dimen>
+    <dimen name="text_size7">28sp</dimen>
+    <dimen name="text_size8">30sp</dimen>
+    <dimen name="text_size9">32sp</dimen>
+    <dimen name="text_size10">34sp</dimen>
+
+
 </resources>

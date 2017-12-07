@@ -85,6 +85,17 @@ public class Item {
         return null;
     }
 
+    public static int getIndex(String name) {
+        int index = 0;
+        for (Item item : ITEMS) {
+            if (item.getName().equals(name)) {
+                return index;
+            }
+            index++;
+        }
+        return -1;
+    }
+
     private final String mName;
     private final int mChapters;
 
