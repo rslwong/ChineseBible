@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     int verse=-1;
     String book="";
+    static float fontSize=-1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,10 +49,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //tv.setMovementMethod(new ScrollingMovementMethod());
-        tv.setMaxLines(1000);
         tv.setMovementMethod(ScrollingMovementMethod.getInstance());
-
-        tv.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimension(R.dimen.text_medium));
+        if (fontSize==-1) {
+            fontSize = getResources().getDimension(R.dimen.text_medium);
+        }
+        tv.setTextSize(TypedValue.COMPLEX_UNIT_PX, fontSize);
 
         this.setTitle(book);
 
@@ -60,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 float size = tv.getTextSize()*0.9f;
                 tv.setTextSize(TypedValue.COMPLEX_UNIT_PX, size);
+                fontSize = size;
             }
         });
 
@@ -67,7 +70,9 @@ public class MainActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 float size = tv.getTextSize()*1.1f;
-                tv.setTextSize(TypedValue.COMPLEX_UNIT_PX, size);            }
+                tv.setTextSize(TypedValue.COMPLEX_UNIT_PX, size);
+                fontSize = size;
+            }
         });
 
     }
