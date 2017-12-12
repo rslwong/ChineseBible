@@ -17,7 +17,7 @@
 <resources>
 
     <dimen name="grid_spacing">4dp</dimen>
-    <dimen name="text_medium">18sp</dimen>
+    <dimen name="text_medium">20sp</dimen>
     <dimen name="text_large">22sp</dimen>
     <dimen name="text_huge">26sp</dimen>
 
