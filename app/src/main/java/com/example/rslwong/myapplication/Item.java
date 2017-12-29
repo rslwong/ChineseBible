@@ -5,7 +5,7 @@ package com.example.rslwong.myapplication;
 
 public class Item {
 
-    public static Item[] ITEMS = new Item[] {
+    public static final Item[] ITEMS = new Item[] {
             new Item("舊 約 全 書",-1),
             new Item("創世紀", 50),
             new Item("出埃及記", 40),
@@ -99,7 +99,7 @@ public class Item {
     private final String mName;
     private final int mChapters;
 
-    Item(String name, int chapters) {
+    private Item(String name, int chapters) {
         mName = name;
         mChapters = chapters;
     }

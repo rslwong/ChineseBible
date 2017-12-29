@@ -18,13 +18,13 @@ import android.widget.ScrollView;
 
 public class MainActivity extends AppCompatActivity {
 
-    int verse=-1;
-    String book="";
-    static int savedProgress = 5;
-    static float fontSize = -1f;
+    private int verse=-1;
+    private String book="";
+    private static int savedProgress = 5;
+    private static float fontSize = -1f;
    // final TextView tv=findViewById(R.id.textView);
 
-    public void dumpText(TextView tv, String fileName){
+    private void dumpText(TextView tv, String fileName){
 
         BufferedReader reader;
 

@@ -3,5 +3,7 @@
     <string name="textview"></string>
     <string name="button1">&lt;&lt;</string>
     <string name="button2">&gt;&gt;</string>
+    <string name="title1">聖 經</string>
+    <string name="title2">繁體中文和合本</string>
 
 </resources>

@@ -12,7 +12,7 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="聖 經"
+        android:text="@string/title1"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textSize="36sp"
@@ -21,7 +21,7 @@
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="繁體中文和合本"
+        android:text="@string/title2"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textSize="36sp"

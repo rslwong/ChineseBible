@@ -4,9 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.ActivityOptionsCompat;
-import android.support.v4.util.Pair;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -15,13 +12,9 @@ import android.widget.GridView;
 import android.util.TypedValue;
 import android.view.Gravity;
 
-import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainEntAct extends Activity implements AdapterView.OnItemClickListener {
-
-    private GridView mGridView;
-    private GridAdapter mAdapter;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -29,9 +22,9 @@ public class MainEntAct extends Activity implements AdapterView.OnItemClickListe
         setContentView(R.layout.grid);
 
         // Setup the GridView and set the adapter
-        mGridView = (GridView) findViewById(R.id.grid);   // grid.xml
+        GridView mGridView = (GridView) findViewById(R.id.grid);
         mGridView.setOnItemClickListener(this);
-        mAdapter = new GridAdapter();
+        GridAdapter mAdapter = new GridAdapter();
         mGridView.setAdapter(mAdapter);
     }
 

@@ -7,9 +7,6 @@ import android.os.Handler;
 
 public class splash extends Activity {
 
-    /** Duration of wait **/
-    private final int SPLASH_DISPLAY_LENGTH = 2000;
-
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle icicle) {
@@ -18,6 +15,8 @@ public class splash extends Activity {
 
         /* New Handler to start the Menu-Activity 
          * and close this Splash-Screen after some seconds.*/
+        /* Duration of wait */
+        int SPLASH_DISPLAY_LENGTH = 2000;
         new Handler().postDelayed(new Runnable(){
             @Override
             public void run() {

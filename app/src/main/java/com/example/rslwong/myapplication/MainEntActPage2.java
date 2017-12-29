@@ -15,10 +15,8 @@ import android.widget.TextView;
 
 public class MainEntActPage2 extends Activity implements AdapterView.OnItemClickListener {
 
-    private GridView mGridView;
-    private GridAdapter mAdapter;
-    int totalChapters=-1;
-    String book="";
+    private int totalChapters=-1;
+    private String book="";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -31,9 +29,9 @@ public class MainEntActPage2 extends Activity implements AdapterView.OnItemClick
             totalChapters = b.getInt("totalChapters");
         }
         // Setup the GridView and set the adapter
-        mGridView = (GridView) findViewById(R.id.grid);   // grid.xml
+        GridView mGridView = (GridView) findViewById(R.id.grid);
         mGridView.setOnItemClickListener(this);
-        mAdapter = new GridAdapter();
+        GridAdapter mAdapter = new GridAdapter();
         mGridView.setAdapter(mAdapter);
     }
 
